@@ -70,7 +70,6 @@ EOF
 
 interface=$(lshw -class network | awk '/logical name:/{print $3}')
 for element in $interface;do
-	echo "$element"
 	if [[ $element = lo* ]] ; then continue ; fi
 		ipv4_address=$(ip a s $element | awk -F '[/ ]+' '/inet /{print $3}')
 		ipv4_hostname=$(getent hosts $ipv4_address | awk '{print $2}')
