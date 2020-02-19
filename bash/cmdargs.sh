@@ -60,7 +60,7 @@ else
   echo "Varbose mode is Off."
 fi
 if [ $v2 -gt 0 ]; then
-  echo "Debug Mode is On with level $d."
+  echo "Debug Mode is On with level $v2."
 else
   echo "Debug Mode is Off."
 fi
